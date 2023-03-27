@@ -20,6 +20,7 @@ public class Main {
 
     //В решении используются стримы, но вместо них можно написать обычные циклы
     //Стримы просто позволяют сделать это короче
+
     public static void main(String[] args) {
         GuessService guessService;
         int good = 0;
