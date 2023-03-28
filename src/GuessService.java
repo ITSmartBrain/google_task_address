@@ -100,7 +100,8 @@ public class GuessService {
         addresses = new ArrayList<>();
         int size = 10;
         //генерируем 10 стран
-        List<String> countries = IntStream.range(1, size).mapToObj(t -> "City" + t).collect(Collectors.toList());
+        //City1, City2, City3
+        List<String> countries = IntStream.range(1, size).mapToObj(t -> "Country" + t).collect(Collectors.toList());
         //генерируем 10 городов
         List<String> cities = IntStream.range(1, size).mapToObj(t -> "City" + t).collect(Collectors.toList());
         //генерируем 10 улиц
@@ -112,7 +113,7 @@ public class GuessService {
         Set<Address> set = new HashSet<>();
         //комбинируем
         while (set.size() < 100) {
-            String country = countries.get(rnd.nextInt(countries.size()));
+            String country = countries.get(rnd.nextInt(countries.size())); //[0; 9]
             String city = cities.get(rnd.nextInt(cities.size()));
             String street = streets.get(rnd.nextInt(streets.size()));
             int house = houses.get(rnd.nextInt(houses.size()));

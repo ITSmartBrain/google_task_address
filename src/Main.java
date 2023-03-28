@@ -31,8 +31,6 @@ public class Main {
             if(guessService.startProgram()) good++;
         }
         System.out.printf("Процент угадываемости: %d", good);
-
-
     }
 
 
